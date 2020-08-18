@@ -1,0 +1,122 @@
+.input-modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.show-input-modal {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.input-modal {
+    position: relative;
+    background-color: white;
+    width: 310px;
+    height: 420px;
+    top: -30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.30);
+}
+
+.input-modal #time_and_date {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+}
+
+.input-modal #edit_date {
+    margin-left: 20px;
+}
+
+.input-modal textarea { 
+    resize: none;
+    border: none;
+    font-size: 18px;
+    padding: 1%;
+    height: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.input-modal #comments {
+    width: 85%;
+    box-shadow: 0 5px 10px rgba(0,0,0,.30);
+}
+
+.input-modal #edit_volume {
+    width: 85%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hide_volume_input_field {
+    display: none;
+}
+
+.input-modal #volume {
+    width: 45px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,.30);
+}
+
+.input-modal #modal_timestamp {
+    display: none;
+}
+
+.input-modal .input-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.input-button {
+    padding: 10px 30px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.input-modal #delete_log {
+    color: white;
+    background-color: red;
+}
+
+.input-modal #update_log {
+    color: white;
+    background-color: black;
+
+}
+
+.input-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    padding: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+input {
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.30);
+}

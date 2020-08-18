@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="input-modal.css">
+    <link rel="stylesheet" href="call_to_action_button.css">
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
+    <title>Little Evies Log</title>
+</head>
+<body onload="display_log_entries_on_load();">
+    <div class="container" id="blur">
+        
+        <!-- SCRUFFY'S CHEEKY FACE -->
+        <div class="header">
+            <img class="logo" src="scruffy.jpg">
+            <h1>Scruffy's Log</h1>
+        </div>
+        <!--<div class="navigation">
+            <div class="filters">
+                <img class="analytics_icon active" src='dog_bowl.png' onclick="this.classList.toggle('active')">
+                <img class="analytics_icon active" src='poop.png' onclick="this.classList.toggle('active')">
+                <img class="analytics_icon active" src='piddle.png' onclick="this.classList.toggle('active')">
+            </div>
+            <div class="analytics">
+                <img class="analytics_icon active" id="chart" onclick="show_charts()" src="analytics.png">
+                <img class="analytics_icon active" id="table" onclick="show_table()" src="analytics_table.png">
+            </div>
+        </div>-->
+        <!-- WHERE THE BLOG LIVES -->
+        <div class="content" id="log_entries">
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION BUTTON -->
+    <div class="action" onclick="actionToggle();">
+        <span>+</span>
+        <ul>
+            <li onclick="addEntry('dog_bowl');"><img class="popup_icon" src='dog_bowl.png'> Food</li>
+            <li onclick="addEntry('poop.png');"><img class="popup_icon" src='poop.png'> Poop</li>
+            <li onclick="addEntry('piddle.png');"><img class="popup_icon" src='piddle.png'> piddle</li>
+            <li onclick="addEntry('message.png');"><img class="popup_icon" src='message.png'> Comment</li>
+        </ul>
+    </div>
+
+    <!-- EDIT LOG ENTRY -->
+    <div class="input-modal-bg">
+        <div class="input-modal">
+            <h2>Edit Log Entry</h2>
+            <div id="time_and_date">
+                <input type="time" id="edit_time" name="time_entry">
+                <input type="date" id="edit_date" name="date_entry">
+            </div>
+            <div id="edit_volume"><input inputmode="numeric" id="volume" pattern="[0-9]*" type="text" name="volume_entry" onfocus="this.value=''" onblur="check_volume();" value="" size ="3" maxlength="3"> g</div>
+            <div id="comments"><textarea id="edit_comment" rows="4" placeholder="Comments" maxlength="90"></textarea></div>
+            <div id="modal_timestamp"></div>
+            <div id="input-buttons">
+                <input type="button" id="delete_log" class="input-button" onclick="delete_log_entry();" value="delete">
+                <input type="button" id="update_log" class="input-button" onclick="update_log_entry();" value=" save ">
+            </div>
+            <span class="input-modal-close" onclick="close_Input_Modal();">X</span>
+        </div>
+    </div>
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript" src="scruff.js"></script>
+</body>
+</html>
