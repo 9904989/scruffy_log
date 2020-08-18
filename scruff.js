@@ -128,7 +128,7 @@ function refresh_log_entries() {
         '<div class="log_entry" onclick="edit_log_entry(this);">'
         //+`<div class="time">${doc.time}\n${format_date(doc.timestamp)}</div>`
         +`<div class="time">${doc.time}</div>`
-        +`<div class="volume"><a class="volume_value">${doc.volume}</a>ml <img class="dog_bowl" src="dog_bowl.png"></div>`
+        +`<div class="volume"><a class="volume_value">${doc.volume}</a>g <img class="dog_bowl" src="dog_bowl.png"></div>`
         +`<div class="comment">${doc.comment}</div>`
         +`<div class="timestamp">${doc.timestamp}</div>`
         +`<div class="blog_date">${doc.blog_date}</div>`
